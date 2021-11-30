@@ -1,0 +1,36 @@
+/* body */
+:root {
+    --primary-color: #D3D3D3;
+    --sec-color:#7c3aed;
+  }
+body{
+    background-color: var(--primary-color);
+    align-items: center;
+    
+}
+h1,h2 ,p{
+    text-align: center;
+}
+
+/* input and input container*/
+.mid{
+    text-align: center;
+}
+input{
+    border-color: var(--sec-color);
+    height: 30px;
+    border-radius: 10px;
+}
+label{
+    font-size: 2rem;
+}
+/* table */
+th,td{
+    border: 2px solid var(--sec-color);
+    padding: 1rem;
+}
+
+.table{
+    width:80%;
+    margin: 0 auto; 
+}

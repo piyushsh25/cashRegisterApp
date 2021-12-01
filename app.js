@@ -7,7 +7,9 @@ const noOfNotes=document.querySelectorAll(".no-of-notes")
 const availableNotes= [2000,500,100,50,10,5,1];
 checkButton.addEventListener("click",function validateAmount(){
  message.style.display="none"
-    if(cashGiven.value-billAmount.value>0){
+
+if(cashGiven.value && billAmount.value>=0) {
+        if(cashGiven.value-billAmount.value>=0){
          if(cashGiven.value>=billAmount.value){
          const amountReturn=cashGiven.value-billAmount.value;
          calculateChange(amountReturn);
@@ -19,8 +21,14 @@ checkButton.addEventListener("click",function validateAmount(){
     }
     else{
 message.style.display="block";
-message.innerHTML="Error amount!"; 
+message.innerHTML="wanna wash plates!"; 
+    }}else{
+        message.style.display="block";
+        message.innerHTML="Error amount!";  
     }
+
+    cashGiven.value='';
+    billAmount.value=''
 })
 
 function calculateChange(amountReturn){

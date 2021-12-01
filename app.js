@@ -14,12 +14,15 @@ const amountToBeReturned=cashGiven.value-billAmount.value;
 changeToBeReturned(amountToBeReturned);
 }else{
     showMessage("wanna wash plates??")
+    billAmount.value='';
+cashGiven.value=''
 }
 }else{
     showMessage("invalid bill amount")
-}
-billAmount.value='';
+    billAmount.value='';
 cashGiven.value=''
+}
+
 
 });
 function changeToBeReturned(amountToBeReturned){

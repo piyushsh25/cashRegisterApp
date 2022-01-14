@@ -25,7 +25,7 @@ cashGiven.value=''
 
 
 });
-function changeToBeReturned(amountToBeReturned){
+let changeToBeReturned=(amountToBeReturned)=>{
     for(let i=0;i<availableNotes.length;i++){
         const change=Math.trunc(amountToBeReturned/availableNotes[i]);
         amountToBeReturned=amountToBeReturned%availableNotes[i]
@@ -33,10 +33,10 @@ function changeToBeReturned(amountToBeReturned){
     }
    
 }
-function hideMessage(){
+let hideMessage=()=>{
     message.style.display="none";
 }
-function showMessage(msg){
+let showMessage=(msg)=>{
     message.style.display="block";
     message.innerText=msg;
 }
